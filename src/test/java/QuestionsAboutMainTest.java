@@ -36,7 +36,7 @@ public class QuestionsAboutMainTest {
             executor.executeScript("arguments[0].click();", questionsAboutMainField);
             WebElement expandedElement = homePage.getQuestionAboutMainAriaControlField(questionsAboutMainField);
             assertEquals("Элемент с id = " + questionsAboutMainField.getAttribute("id") + " не поставил aria-disabled в false после нажатия", "true", questionsAboutMainField.getAttribute("aria-disabled"));
-            assertEquals("Элемент с id = " + questionsAboutMainField.getAttribute("id") + " не поставил aria-disabled в false после нажатия", "true", questionsAboutMainField.getAttribute("aria-expanded"));
+            assertEquals("Элемент с id = " + questionsAboutMainField.getAttribute("id") + " не поставил aria-expanded в false после нажатия", "true", questionsAboutMainField.getAttribute("aria-expanded"));
             assertTrue("Элемент с id = " + expandedElement.getAttribute("id") + " не виден, тк присутвтует hidden", expandedElement.isDisplayed());
         });
 
