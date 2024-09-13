@@ -1,3 +1,5 @@
+package test;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +13,9 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
+/**
+ * Проверка вопросов о важном
+ */
 public class QuestionsAboutMainTest {
 
     private WebDriver driver;
@@ -30,7 +34,7 @@ public class QuestionsAboutMainTest {
 
         List<WebElement> questionsAboutMainFields = homePage.getQuestionsAboutMainFields();
 
-        //проверяем что аттрибут aria-disabled стал true и aria-expanded стал true
+        //проверяем что при нажатии на поле аттрибут aria-disabled стал true и aria-expanded стал true
         //и проверим его раскрывающийся элемент
         questionsAboutMainFields.forEach(questionsAboutMainField -> {
             executor.executeScript("arguments[0].click();", questionsAboutMainField);
