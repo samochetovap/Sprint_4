@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import page_object_model.AboutRentDataPage;
 import page_object_model.ConfirmOrderPage;
 import page_object_model.HomePage;
@@ -54,6 +55,7 @@ public class OrderScenarioTest {
     @Before
     public void initDriver() {
 
+//        driver = new FirefoxDriver();
         driver = new ChromeDriver();
         driver.get("https://qa-scooter.praktikum-services.ru/");
     }
@@ -93,8 +95,7 @@ public class OrderScenarioTest {
 
         confirmOrderPage.clickYesButton();
 
-        //чтобы словить баг хрома можно запустить этот метод
-//        confirmOrderPage.isOderDone();
+        confirmOrderPage.isOderDone();
 
     }
 
